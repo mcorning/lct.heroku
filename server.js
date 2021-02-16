@@ -13,8 +13,8 @@ let version = '0.4';
 
 app.use(serveStatic(path.join(__dirname, './dist')));
 
-http.listen(process.env.port, () => {
+http.listen(process.env.PORT, () => {
   console.log(`Server.js Build: ${version}`);
-  console.log(`Server running on http://localhost:${process.env.port}`);
+  console.log(`Server running on http://localhost:${process.env.PORT}`);
   console.log(' ');
 });
