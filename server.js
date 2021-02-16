@@ -1,4 +1,6 @@
 const express = require('express');
+const serveStatic = require('serve-static');
+
 const path = require('path');
 
 const app = express();
@@ -9,7 +11,7 @@ const app = express();
 const http = require('http').createServer(app);
 let version = '0.4';
 
-app.use(express.static(path.join(__dirname, './dist')));
+app.use(serveStatic(path.join(__dirname, './dist')));
 
 http.listen(process.env.port, () => {
   console.log(`Server.js Build: ${version}`);
