@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm run build",
     "start": "node server",
     "monitor": "nodemon server"
   },
@@ -12,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
+    "serve-static": "^1.14.1",
     "base64id": "^2.0.0",
     "cli-color": "^2.0.0",
     "colors": "^1.4.0",
@@ -24,8 +25,4 @@
   "engines": {
     "node": "12.x"
   },
-  "devDependencies": {
-    "express": "^4.17.1",
-    "serve-static": "^1.14.1"
-  }
 }
